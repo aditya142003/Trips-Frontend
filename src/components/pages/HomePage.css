@@ -1,0 +1,9 @@
+.HomePage__Container {
+  width: 100vw;
+}
+.HomePage__Container--content {
+  margin: auto;
+  width: 80vw;
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+}
