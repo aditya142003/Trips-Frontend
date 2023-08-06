@@ -3,6 +3,7 @@
   margin: 3rem auto;
   background-color: white;
   border-radius: 1.5rem;
+  position: relative;
 }
 .HomeFeed__headingCont {
   display: grid;
@@ -73,4 +74,16 @@
 }
 .HomeFeed__icon:hover {
   cursor: pointer;
+}
+.CommentSection {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  height: 0%;
+  width: 100%;
+  background-color: rgb(243, 243, 243);
+  z-index: 2;
+  border-radius: 1.5rem;
+  visibility: hidden;
+  transition: all 0.5s ease;
 }
