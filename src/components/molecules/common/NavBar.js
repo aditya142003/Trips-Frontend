@@ -15,6 +15,7 @@ function NavBar(props) {
   window.onload = function () {
     const selTab = document.getElementById(props.tab);
     selTab.style.backgroundColor = "var(--color-gray)";
+    selTab.style.borderLeft = "var(--color-purple-dark) .5rem solid";
   };
 
   return (

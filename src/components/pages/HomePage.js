@@ -12,7 +12,7 @@ function HomePage() {
       <Header />
       <div className="HomePage__Container--content">
         <NavBar tab="Home" />
-        <div>
+        <div className="HomePage__midCont">
           <HomeStories />
           <HomeFeed />
         </div>
