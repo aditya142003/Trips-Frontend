@@ -1,10 +1,13 @@
 import "./css/style.css";
 import HomePage from "./components/Pages/HomePage";
+import { DataProvider } from "./context/DataContext";
 
 function App() {
   return (
     <div>
-      <HomePage />
+      <DataProvider>
+        <HomePage />
+      </DataProvider>
     </div>
   );
 }

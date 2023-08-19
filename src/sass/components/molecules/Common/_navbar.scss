@@ -1,75 +1,71 @@
-.NavBar__container {
+.NavBar {
   height: 91vh;
   font-size: 1.8rem;
   grid-template-rows: 1fr 10fr;
   display: grid;
   width: 16vw;
+  &__profileCont {
+    background-color: $color-white;
+    border-radius: 1.5rem;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    height: 9rem;
+    margin-bottom: 1rem;
+    &--image {
+      margin: auto 1rem;
+      height: 4.5rem;
+      border-radius: 50rem;
+    }
+    &--name {
+      margin: auto 1rem;
+      & :nth-child(1) {
+        font-family: "Poppins", sans-serif;
+        font-weight: 700;
+        font-size: 1.5rem;
+        line-height: 2rem;
+      }
+      & :nth-child(2) {
+        font-family: "Poppins", sans-serif;
+        font-weight: 500;
+        font-size: 1.3rem;
+        opacity: 0.8;
+      }
+    }
+  }
+  &__nav {
+    background-color: $color-white;
+    margin: 0.5rem 0;
+    border-radius: 1.5rem;
+    padding-top: 5px;
+    &--tabs {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      padding: 1rem 0;
+      font-size: 2rem;
+      font-weight: 600;
+      height: 5rem;
+      &:hover {
+        background-color: $color-gray;
+        cursor: pointer;
+        color: $color-purple-dark;
+        border-left: $color-purple-dark 0.5rem solid;
+      }
+      & :nth-child(2) {
+        margin: 0 1rem;
+        text-align: start;
+      }
+      & :nth-child(1) {
+        transform: scale(1.1);
+        margin: 0 1rem;
+        text-align: end;
+        opacity: 0.8;
+      }
+    }
+  }
 }
-.NavBar__container--profileCont {
-  background-color: $color-white;
-  border-radius: 1.5rem;
-  display: grid;
-  grid-template-columns: 1fr 3fr;
-  height: 9rem;
-  margin-bottom: 1rem;
-}
-.NavBar__container--profile {
-  margin: auto 1rem;
-}
-.NavBar__container--profile--image {
-  height: 4.5rem;
-  border-radius: 50rem;
-}
-.NavBar__container--nameCont {
-  margin: auto 1rem;
-}
-.NavBar__container--nameCont :nth-child(1) {
-  font-family: "Poppins", sans-serif;
-  font-weight: 700;
-  font-size: 1.5rem;
-  line-height: 2rem;
-}
-.NavBar__container--nameCont :nth-child(2) {
-  font-family: "Poppins", sans-serif;
-  font-weight: 500;
-  font-size: 1.3rem;
-  opacity: 0.8;
-}
-
-.NavBar__container--nav {
-  background-color: $color-white;
-  margin: 0.5rem 0;
-  border-radius: 1.5rem;
-  padding-top: 5px;
-}
-.NavBar__container--tabs {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  padding: 1rem 0;
-  font-size: 2rem;
-  font-weight: 600;
-  height: 5rem;
-}
-
-.NavBar__container--tabs:hover {
+.activeTab {
   background-color: $color-gray;
   cursor: pointer;
   color: $color-purple-dark;
   border-left: $color-purple-dark 0.5rem solid;
-}
-.activeTab {
-  background-color: var(--color-gray);
-  cursor: pointer;
-  color: var(--color-purple-dark);
-}
-
-.NavBar__container--tabs :nth-child(2) {
-  margin: 0 1rem;
-  text-align: start;
-}
-.NavBar__container--tabs :nth-child(1) {
-  transform: scale(1.1);
-  margin: 0 1rem;
-  text-align: end;
-  opacity: 0.8;
 }

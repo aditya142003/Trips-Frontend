@@ -63,48 +63,40 @@ function HomeFeed() {
     <div>
       {PostObj.map((post) => {
         return (
-          <div className="HomeFeed__container" key={post.Id}>
-            <div className="HomeFeed__headingCont">
-              <div className="HomeFeed__container--profile">
-                <img
-                  src={Post}
-                  className="HomeFeed__container--profile--image"
-                />
-              </div>
-              <div className="HomeFeed__container--profilename">
+          <div className="Feed" key={post.Id}>
+            <div className="Feed__profile">
+              <img src={Post} className="Feed__profile--image" />
+              <div className="Feed__profile--name">
                 <div>
                   <span>Aditya Bhatnagar</span>
-                  <span className="HomeFeed__time">3hr Ago</span>
+                  <span className="Feed__time">3hr Ago</span>
                 </div>
                 <div>Udaipur, India</div>
               </div>
-              <Options fontSize="inherit" className="HomeFeed__icon"></Options>
+              <Options fontSize="inherit" className="Feed__icon"></Options>
             </div>
 
-            <div className="HomeFeed__container--Postimage">
-              <img src={post.Image} className="HomeFeed__container--image" />
-            </div>
-            <div className="HomeFeed__container--options">
+            <img src={post.Image} className="Feed__postimage" />
+            <div className="Feed__reaction">
               <div>
-                <Like fontSize="inherit" className="HomeFeed__icon"></Like>
+                <Like fontSize="inherit" className="Feed__icon"></Like>
                 <Comment
                   fontSize="inherit"
-                  className="HomeFeed__icon"
+                  className="Feed__icon"
                   onClick={(e) => {
                     commentOpen(e, post.Id);
                   }}
                 ></Comment>
-                <Share fontSize="inherit" className="HomeFeed__icon"></Share>
+                <Share fontSize="inherit" className="Feed__icon"></Share>
               </div>
               <div>
-                <Save fontSize="inherit" className="HomeFeed__icon"></Save>
+                <Save fontSize="inherit" className="Feed__icon"></Save>
               </div>
             </div>
-            <div className="HomeFeed__container--caption">
-              <div className="HomeFeed__likes">{post.LikesCount} likes</div>
-              <div className="HomeFeed__caption">{Post.Caption}</div>
+            <div className="Feed__footer">
+              <div className="Feed__footer--likes">{post.LikesCount} likes</div>
+              <div className="Feed__footer--caption">{post.Caption}</div>
             </div>
-            <div className="HomeFeed__container--comments"></div>
             <div
               className="CommentSection"
               onClick={(e) => {

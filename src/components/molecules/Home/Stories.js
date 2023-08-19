@@ -3,93 +3,13 @@ import Story from "../Common/20221215_201458.jpg";
 
 function HomeStories() {
   return (
-    <div className="HomeStories__Allstories">
+    <div className="Stories">
       <div>
-        <div className="HomeStories__story">
-          <img src={Story} className="HomeStories__story--Image" />
+        <div className="Stories__story">
+          <img src={Story} className="Stories__story--Image" />
         </div>
-        <div className="HomeStories__container--profile">
-          <img src={Story} className="HomeStories__container--profile--image" />
-        </div>
-      </div>
-      <div>
-        <div className="HomeStories__story">
-          <img src={Story} className="HomeStories__story--Image" />
-        </div>
-        <div className="HomeStories__container--profile">
-          <img src={Story} className="HomeStories__container--profile--image" />
-        </div>
-      </div>
-      <div>
-        <div className="HomeStories__story">
-          <img src={Story} className="HomeStories__story--Image" />
-        </div>
-        <div className="HomeStories__container--profile">
-          <img src={Story} className="HomeStories__container--profile--image" />
-        </div>
-      </div>
-      <div>
-        <div className="HomeStories__story">
-          <img src={Story} className="HomeStories__story--Image" />
-        </div>
-        <div className="HomeStories__container--profile">
-          <img src={Story} className="HomeStories__container--profile--image" />
-        </div>
-      </div>
-      <div>
-        <div className="HomeStories__story">
-          <img src={Story} className="HomeStories__story--Image" />
-        </div>
-        <div className="HomeStories__container--profile">
-          <img src={Story} className="HomeStories__container--profile--image" />
-        </div>
-      </div>
-      <div>
-        <div className="HomeStories__story">
-          <img src={Story} className="HomeStories__story--Image" />
-        </div>
-        <div className="HomeStories__container--profile">
-          <img src={Story} className="HomeStories__container--profile--image" />
-        </div>
-      </div>
-      <div>
-        <div className="HomeStories__story">
-          <img src={Story} className="HomeStories__story--Image" />
-        </div>
-        <div className="HomeStories__container--profile">
-          <img src={Story} className="HomeStories__container--profile--image" />
-        </div>
-      </div>
-      <div>
-        <div className="HomeStories__story">
-          <img src={Story} className="HomeStories__story--Image" />
-        </div>
-        <div className="HomeStories__container--profile">
-          <img src={Story} className="HomeStories__container--profile--image" />
-        </div>
-      </div>
-      <div>
-        <div className="HomeStories__story">
-          <img src={Story} className="HomeStories__story--Image" />
-        </div>
-        <div className="HomeStories__container--profile">
-          <img src={Story} className="HomeStories__container--profile--image" />
-        </div>
-      </div>
-      <div>
-        <div className="HomeStories__story">
-          <img src={Story} className="HomeStories__story--Image" />
-        </div>
-        <div className="HomeStories__container--profile">
-          <img src={Story} className="HomeStories__container--profile--image" />
-        </div>
-      </div>
-      <div>
-        <div className="HomeStories__story">
-          <img src={Story} className="HomeStories__story--Image" />
-        </div>
-        <div className="HomeStories__container--profile">
-          <img src={Story} className="HomeStories__container--profile--image" />
+        <div className="Stories__profile">
+          <img src={Story} className="Stories__profile--image" />
         </div>
       </div>
     </div>
