@@ -1,0 +1,38 @@
+.HomeStories__Allstories {
+    display: flex;
+    width: 41vw;
+    margin: auto;
+    overflow: scroll;
+  }
+  .HomeStories__Allstories::-webkit-scrollbar {
+    display: none;
+  }
+  .HomeStories__Allstories > div {
+    padding: 0 0.5rem;
+    position: relative;
+  }
+  .HomeStories__Allstories > div :hover {
+    cursor: pointer;
+  }
+  .HomeStories__story {
+    height: 15rem;
+    width: 7.8rem;
+    overflow: hidden;
+    border-radius: 2rem;
+  }
+  .HomeStories__story--Image {
+    height: 15rem;
+    transform: translateX(-25%);
+  }
+  .HomeStories__container--profile {
+    top: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+  }
+  .HomeStories__container--profile--image {
+    height: 4.5rem;
+    border-radius: 50rem;
+    border: $color-white 0.23rem dotted;
+  }
+  

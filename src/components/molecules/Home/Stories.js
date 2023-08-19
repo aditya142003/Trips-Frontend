@@ -1,6 +1,5 @@
 import React from "react";
-import "./HomeStories.css";
-import Story from "../common/20221215_201458.jpg";
+import Story from "../Common/20221215_201458.jpg";
 
 function HomeStories() {
   return (

@@ -1,6 +1,6 @@
 import React from "react";
-import Header from "../molecules/common/Header";
-import NavBar from "../molecules/common/NavBar";
+import Header from "../molecules/Common/Header";
+import NavBar from "../molecules/Common/NavBar";
 
 function ExplorePage() {
   return (

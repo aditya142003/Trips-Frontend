@@ -1,5 +1,4 @@
 import React from "react";
-import "./NavBar.css";
 import profile from "./20221215_201458.jpg";
 import HomeIcon from "@mui/icons-material/HomeOutlined";
 import Explore from "@mui/icons-material/ExploreOutlined";

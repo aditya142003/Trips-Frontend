@@ -1,10 +1,9 @@
-import React from "react";
-import Header from "../molecules/common/Header";
-import "./HomePage.css";
-import NavBar from "../molecules/common/NavBar";
-import HomeFeed from "../molecules/HomePage/HomeFeed";
-import HomeFact from "../molecules/HomePage/HomeFact";
-import HomeStories from "../molecules/HomePage/HomeStories";
+import React, { useState, useEffect } from "react";
+import Header from "../molecules/Common/Header";
+import NavBar from "../molecules/Common/NavBar";
+import HomeFeed from "../molecules/Home/Feed";
+import HomeFact from "../molecules/Home/Fact";
+import HomeStories from "../molecules/Home/Stories";
 
 function HomePage() {
   return (

@@ -1,12 +1,11 @@
 import React, { useState } from "react";
-import "./HomeFeed.css";
 import Like from "@mui/icons-material/FavoriteBorderOutlined";
 import LikeFill from "@mui/icons-material/FavoriteOutlined";
 import Comment from "@mui/icons-material/ChatBubbleOutlineRounded";
 import Save from "@mui/icons-material/BookmarkBorderOutlined";
 import Options from "@mui/icons-material/MoreHorizRounded";
 import Share from "@mui/icons-material/SendRounded";
-import Post from "../common/20221215_201458.jpg";
+import Post from "../Common/20221215_201458.jpg";
 
 function HomeFeed() {
   let CommentObj = [

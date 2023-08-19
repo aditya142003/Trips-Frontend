@@ -13,7 +13,7 @@ html {
 body {
   overflow-X: hidden;
   box-sizing: border-box;
-  background-color: var(--color-gray);
+  background-color: $color-gray;
 }
 
 @media screen and (max-width: 1399px) {
