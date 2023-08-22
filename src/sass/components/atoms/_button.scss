@@ -35,3 +35,21 @@
     transform: scale(0.95);
   }
 }
+.Button--blue {
+  display: block;
+  margin: 10px auto;
+  height: 4rem;
+  width: 40rem;
+  font-size: 1.8rem;
+  color: white;
+  background-color: $color-blue-light;
+  border-radius: 10px;
+  border: none;
+  font-weight: 700;
+  &:active {
+    background-color: $color-blue;
+  }
+  &:hover{
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,45 @@
+.Input__container {
+  width: 80%;
+  // border: 0.5px solid rgba(0, 0, 0, 0.178);
+  margin: auto;
+  height: 53vh;
+}
+.Input__pair {
+  position: relative;
+  width: 40rem;
+  margin: auto;
+  &--label {
+    margin: 6px 0;
+    font-size: 2rem;
+    width: 40rem;
+    position: absolute;
+    top: 1.5rem;
+    left: 1rem;
+    opacity: 0.6;
+    pointer-events: none;
+    transition: 0.3s ease;
+  }
+  &--input {
+    margin: 6px 0;
+    border: 0.5px solid rgba(0, 0, 0, 0.178);
+    border-radius: 5px;
+    height: 6rem;
+    width: 40rem;
+    font-size: 1.8rem;
+    padding-top: 1.8rem;
+    padding-left: 1rem;
+    transition: all 0.3s ease;
+    transition-delay: caret-color 0.3s;
+    caret-color: transparent;
+    color: rgba(0, 0, 0, 0.801);
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+.IncorrectMsg {
+  color: $color-red;
+  text-align: center;
+  font-size: 1.4rem;
+}

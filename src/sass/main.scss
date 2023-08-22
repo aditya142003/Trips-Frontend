@@ -9,6 +9,8 @@
 
 @import "components/atoms/button";
 @import "components/atoms/composition";
+@import "components/atoms/input";
+@import "components/atoms/loading";
 
 @import "layout/header";
 @import "layout/grid";
@@ -19,7 +21,12 @@
 @import "components/molecules/Home/feed";
 @import "components/molecules/Home/stories";
 
-@import "pages/home";
-@import "pages/explore";
+@import "pages/homePage";
+@import "pages/explorePage";
+@import "pages/loginPage";
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Rubik+Distressed&display=swap");
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Rubik:ital,wght@0,500;0,700;1,700&display=swap');
+
+  @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;500;600;700&display=swap');

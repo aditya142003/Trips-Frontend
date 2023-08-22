@@ -4,9 +4,8 @@ import NavBar from "../molecules/Common/NavBar";
 import HomeFeed from "../molecules/Home/Feed";
 import HomeFact from "../molecules/Home/Fact";
 import HomeStories from "../molecules/Home/Stories";
-import AxiosFetch from "../../api/AxiosFetch";
+import { PostFetch, GetFetch } from "../../api/Fetch";
 import DataContext from "../../context/DataContext";
-import axios from "axios";
 function HomePage() {
   const { data, setData } = useContext(DataContext);
 
@@ -15,7 +14,8 @@ function HomePage() {
   }, []);
 
   const fetching = async () => {
-    setData(await AxiosFetch("get", "http://localhost:3000/api/v1/users"));
+    const data = await GetFetch("GET", "http://localhost:3000/api/v1/posts/");
+    console.log(data);
   };
 
   return (

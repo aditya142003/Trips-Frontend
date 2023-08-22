@@ -1,0 +1,90 @@
+.login {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background-color: $color-white;
+  display: grid;
+  grid-template-columns: 60vw 40vw;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  &__image {
+    z-index: 2;
+    & > img {
+      transform: translateY(-25%);
+      width: 100%;
+      mask-image: linear-gradient(to right, black 65%, transparent);
+    }
+  }
+  &__divider {
+    width: 40vw;
+    display: grid;
+    grid-template-columns: 40vw 40vw 40vw;
+    position: relative;
+    z-index: 1;
+    right: 40vw;
+    transition: 0.5s ease;
+  }
+  &__container {
+    font-family: "Poppins", sans-serif;
+    height: 95%;
+    width: 40vw;
+    position: relative;
+    top: 12rem;
+    transition: 0.5s ease;
+    &--heading {
+      font-family: "Pacifico", cursive;
+      font-size: 6rem;
+      margin: 10px auto;
+      width: 14rem;
+    }
+    &--signup {
+      width: 80%;
+      margin: 1.5rem auto;
+      height: 10vh;
+      &Text {
+        margin: 0 auto !important;
+        align-items: center;
+        height: 100%;
+        top: 50%;
+        position: relative;
+        transform: translateY(-25%);
+      }
+    }
+    &--text {
+      font-size: 1.8rem;
+      font-weight: 400;
+      opacity: 0.7;
+      width: 40rem;
+      text-align: center;
+      margin: 15px auto;
+      & > a {
+        color: $color-blue-dark;
+        font-weight: 500;
+        opacity: 1;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+.forgetPass:hover {
+  cursor: pointer;
+}
+.signUp__container {
+  font-family: "Poppins", sans-serif;
+  height: 95%;
+  width: 40vw;
+  position: relative;
+  top: 4rem;
+  opacity: 1;
+}
+.forgot__container{
+  font-family: "Poppins", sans-serif;
+  height: 95%;
+  width: 40vw;
+  position: relative;
+  top: 4rem;
+  opacity: 0;
+  transition: .5s ease;
+}
