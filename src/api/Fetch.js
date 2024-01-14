@@ -26,6 +26,3 @@ const PostFetch = async (methods, dataurl, Info) => {
 };
 
 export { GetFetch, PostFetch };
-// useEffect(() => {
-//   fetchData();
-// }, [dataurl]);

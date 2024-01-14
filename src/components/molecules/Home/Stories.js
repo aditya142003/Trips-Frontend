@@ -12,6 +12,70 @@ function HomeStories() {
           <img src={Story} className="Stories__profile--image" />
         </div>
       </div>
+      <div>
+        <div className="Stories__story">
+          <img src={Story} className="Stories__story--Image" />
+        </div>
+        <div className="Stories__profile">
+          <img src={Story} className="Stories__profile--image" />
+        </div>
+      </div>
+      <div>
+        <div className="Stories__story">
+          <img src={Story} className="Stories__story--Image" />
+        </div>
+        <div className="Stories__profile">
+          <img src={Story} className="Stories__profile--image" />
+        </div>
+      </div>
+      <div>
+        <div className="Stories__story">
+          <img src={Story} className="Stories__story--Image" />
+        </div>
+        <div className="Stories__profile">
+          <img src={Story} className="Stories__profile--image" />
+        </div>
+      </div>
+      <div>
+        <div className="Stories__story">
+          <img src={Story} className="Stories__story--Image" />
+        </div>
+        <div className="Stories__profile">
+          <img src={Story} className="Stories__profile--image" />
+        </div>
+      </div>
+      <div>
+        <div className="Stories__story">
+          <img src={Story} className="Stories__story--Image" />
+        </div>
+        <div className="Stories__profile">
+          <img src={Story} className="Stories__profile--image" />
+        </div>
+      </div>
+      <div>
+        <div className="Stories__story">
+          <img src={Story} className="Stories__story--Image" />
+        </div>
+        <div className="Stories__profile">
+          <img src={Story} className="Stories__profile--image" />
+        </div>
+      </div>
+      <div>
+        <div className="Stories__story">
+          <img src={Story} className="Stories__story--Image" />
+        </div>
+        <div className="Stories__profile">
+          <img src={Story} className="Stories__profile--image" />
+        </div>
+      </div>
+      <div>
+        <div className="Stories__story">
+          <img src={Story} className="Stories__story--Image" />
+        </div>
+        <div className="Stories__profile">
+          <img src={Story} className="Stories__profile--image" />
+        </div>
+      </div>
     </div>
   );
 }

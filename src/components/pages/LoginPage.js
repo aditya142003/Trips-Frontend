@@ -1,12 +1,12 @@
-import React, { useState, useEffect, useContext } from "react";
-import LandingImage from "../Image/LandingImage.jpg";
-import { GetFetch, PostFetch } from "../../api/Fetch";
+import React, { useState, useEffect } from "react";
+import LandingImage from "../../resources/Image/LandingImage.jpg";
+import { PostFetch } from "../../api/Fetch";
 import config from "../../config";
 import Loading from "../atoms/Loading";
-import DataContext from "../../context/DataContext";
 import { useNavigate } from "react-router-dom";
 
 function LoginPage() {
+  const nav = useNavigate();
   const [bgImage, setBgImage] = useState();
   const [loading, setLoading] = useState(true);
   const [errorMsgLogin, seterrorMsgLogin] = useState(false);
@@ -32,8 +32,7 @@ function LoginPage() {
     passwordConfirm: "",
   });
 
-  const nav = useNavigate();
-
+  //For developer environment only
   useEffect(() => {
     if (config.WORKING != "developer") {
       fetchingBGImage();
@@ -51,7 +50,7 @@ function LoginPage() {
       }
     );
     const data = await rawResponse.json();
-    console.log(data);
+    console.log(rawResponse);
     setBgImage(data.urls.regular);
     setLoading(false);
   };
@@ -94,11 +93,13 @@ function LoginPage() {
     );
 
     if (data.status == "success") {
+      localStorage.setItem("currUserId", JSON.stringify(data.user._id));
       nav("/home");
     } else {
       seterrorMsgLogin(true);
     }
   };
+
   const fetchingSignupApi = async () => {
     if (
       signupInfo.password.length >= 8 &&
@@ -109,7 +110,6 @@ function LoginPage() {
         "http://localhost:3000/api/v1/users/signup",
         signupInfo
       );
-      console.log(data);
 
       if (data.status == "success") {
         nav("/home");
@@ -159,23 +159,7 @@ function LoginPage() {
     }
   };
 
-  const submitLoginInfo = () => {
-    console.log(loginInfo);
-    fetchingLoginApi();
-  };
-  const submitSignupInfo = () => {
-    console.log(signupInfo);
-    fetchingSignupApi();
-  };
-  const submitForgotInfo = () => {
-    console.log(forgotInfo);
-    fetchingForgotApi();
-  };
-
   const toggleSignUp = () => {
-    console.log(
-      document.getElementsByClassName("login__divider")[0].style.right
-    );
     if (
       document.getElementsByClassName("login__divider")[0].style.right ===
       "80vw"
@@ -191,9 +175,6 @@ function LoginPage() {
   };
 
   const toggleForgot = () => {
-    console.log(
-      document.getElementsByClassName("login__divider")[0].style.right
-    );
     if (
       document.getElementsByClassName("login__divider")[0].style.right === "0vw"
     ) {
@@ -276,7 +257,7 @@ function LoginPage() {
                 <button
                   className="Button--blue"
                   type="submit"
-                  onClick={submitForgotInfo}
+                  onClick={fetchingForgotApi}
                 >
                   Reset
                 </button>
@@ -313,7 +294,7 @@ function LoginPage() {
                 <button
                   className="Button--blue"
                   type="submit"
-                  onClick={submitForgotInfo}
+                  onClick={fetchingForgotApi}
                 >
                   Submit
                 </button>
@@ -367,7 +348,7 @@ function LoginPage() {
             <button
               className="Button--blue"
               type="submit"
-              onClick={submitLoginInfo}
+              onClick={fetchingLoginApi}
             >
               Log in
             </button>
@@ -465,7 +446,7 @@ function LoginPage() {
                 }}
               />
             </div>
-            <button className="Button--blue" onClick={submitSignupInfo}>
+            <button className="Button--blue" onClick={fetchingSignupApi}>
               Sign up
             </button>
             {errorMsgpassShort ? (

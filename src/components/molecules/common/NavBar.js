@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import profile from "./20221215_201458.jpg";
 import HomeIcon from "@mui/icons-material/HomeOutlined";
 import Explore from "@mui/icons-material/ExploreOutlined";
@@ -9,23 +9,39 @@ import Travel from "@mui/icons-material/HikingOutlined";
 import Profile from "@mui/icons-material/Person2Outlined";
 import Saved from "@mui/icons-material/BookmarkBorderOutlined";
 import Settings from "@mui/icons-material/SettingsOutlined";
+import { useNavigate } from "react-router-dom";
+import DataContext from "../../../context/DataContext";
+import Loading from "../../atoms/Loading";
+import { PersonOutlined } from "@mui/icons-material";
 
 function NavBar(props) {
-  window.onload = function () {
-    const selTab = document.getElementById(props.tab).classList.add("activeTab");
-  };
-
-  return (
+  const { currUser, setCurrUser } = useContext(DataContext);
+  const nav = useNavigate();
+    const selTab = document
+      .getElementById(props.tab)
+      .classList.add("activeTab");
+  return currUser ? (
     <div className="NavBar">
       <div className="NavBar__profileCont">
-        <img src={profile} className="NavBar__profileCont--image" />
+        {currUser.img ? (
+          <img src={currUser.img} className="NavBar__profileCont--image" />
+        ) : (
+          <PersonOutlined className="NavBar__profileCont--image" fontSize="larger"/>
+        )}
+
         <div className="NavBar__profileCont--name">
-          <div>Aditya Bhatnagar</div>
-          <div>@Aditya</div>
+          <div>{currUser.fullName}</div>
+          <div>@{currUser.username}</div>
         </div>
       </div>
       <div className="NavBar__nav">
-        <div className="NavBar__nav--tabs" id="Home">
+        <div
+          className="NavBar__nav--tabs"
+          id="Home"
+          onClick={() => {
+            nav("/home");
+          }}
+        >
           <div>
             <HomeIcon fontSize="larger"></HomeIcon>
           </div>
@@ -61,7 +77,13 @@ function NavBar(props) {
           </div>
           <div>Travel Guide</div>
         </div>
-        <div className="NavBar__nav--tabs" id="Profile">
+        <div
+          className="NavBar__nav--tabs"
+          id="Profile"
+          onClick={() => {
+            nav("/profile");
+          }}
+        >
           <div>
             <Profile fontSize="larger"></Profile>
           </div>
@@ -81,6 +103,8 @@ function NavBar(props) {
         </div>
       </div>
     </div>
+  ) : (
+    <Loading />
   );
 }
 

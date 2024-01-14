@@ -4,31 +4,47 @@ import NavBar from "../molecules/Common/NavBar";
 import HomeFeed from "../molecules/Home/Feed";
 import HomeFact from "../molecules/Home/Fact";
 import HomeStories from "../molecules/Home/Stories";
-import { PostFetch, GetFetch } from "../../api/Fetch";
 import DataContext from "../../context/DataContext";
+import fetchingCurrUser from "../../api/SetUserDetail";
+
 function HomePage() {
-  const { data, setData } = useContext(DataContext);
+  const [currUserId, setCurrUserId] = useState("");
+  const [countRender, setcountRender] = useState(0);
+  const { currUser, setCurrUser } = useContext(DataContext);
 
   useEffect(() => {
-    fetching();
+    setCurrUserId(JSON.parse(localStorage.getItem("currUserId")));
   }, []);
 
-  const fetching = async () => {
-    const data = await GetFetch("GET", "http://localhost:3000/api/v1/posts/");
-    console.log(data);
-  };
+  useEffect(() => {
+    setcountRender(countRender + 1);
+    if (countRender != 0) {
+      const data = new Promise((res, rej) => {
+        res(fetchingCurrUser(currUserId));
+        rej(fetchingCurrUser(currUserId));
+      });
+      data
+        .then((dataRec) => {
+          console.log("Home", dataRec);
+          setCurrUser(dataRec);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    }
+  }, [currUserId]);
 
   return (
     <div className="HomePage__Container">
       <Header />
+      <NavBar tab="Home" />
       <div className="HomePage__Container--content">
-        <NavBar tab="Home" />
         <div className="HomePage__midCont">
           <HomeStories />
           <HomeFeed />
         </div>
-        <HomeFact />
       </div>
+      <HomeFact />
     </div>
   );
 }

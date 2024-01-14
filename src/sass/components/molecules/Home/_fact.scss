@@ -1,7 +1,13 @@
 .HomeFact__container {
-    width: 19vw;
-    background-color: $color-white;
-    height: 91vh;
-    border-radius: 1.5rem;
+  width: 20vw;
+  background-color: $color-white;
+  height: 87vh;
+  border-radius: 1.5rem;
+  position: fixed;
+  left: 74vw;
+  top: 10vh;
+  overflow-y: scroll;
+  &::-webkit-scrollbar {
+    display: none;
   }
-  
+}

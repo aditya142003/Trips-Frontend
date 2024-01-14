@@ -1,0 +1,54 @@
+.ProfilePage {
+  width: 100vw;
+  &__Container {
+    margin-left: 30vw;
+    margin-top: 10rem;
+    width: 50vw;
+    // background-color: gold;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+
+    &--image {
+      height: 15rem;
+      border-radius: 50rem;
+      margin: auto;
+    }
+    &--Info {
+      width: 100%;
+      height: 100%;
+      margin: auto;
+      // background-color: aqua;
+      &Username {
+        font-family: "Poppins", sans-serif;
+        font-weight: 700;
+        font-size: 2.5rem;
+        // text-align: center;
+      }
+      & > div {
+        display: grid;
+        grid-template-columns: 1fr 1.5fr;
+        align-items: center;
+        width: 50rem;
+        & > .Button--blue {
+          width: 15rem;
+        }
+      }
+    }
+    &--Follow {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      font-family: "Poppins", sans-serif;
+      font-weight: 500;
+      font-size: 2rem;
+      // text-align: center;
+      width: 50rem;
+    }
+    &--Bio {
+      font-family: "Poppins", sans-serif;
+      font-weight: 500;
+      font-size: 2rem;
+      // text-align: center;
+      width: 50rem;
+    }
+  }
+}

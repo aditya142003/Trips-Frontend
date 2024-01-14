@@ -1,9 +1,12 @@
 .NavBar {
-  height: 91vh;
+  height: 88vh;
   font-size: 1.8rem;
   grid-template-rows: 1fr 10fr;
   display: grid;
   width: 16vw;
+  position: fixed;
+  left: 10vw;
+  top: 7rem;
   &__profileCont {
     background-color: $color-white;
     border-radius: 1.5rem;

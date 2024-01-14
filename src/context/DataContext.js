@@ -1,15 +1,19 @@
-import { createContext, useState } from "react";
+import { createContext, useState, useEffect } from "react";
 
 const DataContext = createContext({});
 
 export const DataProvider = ({ children }) => {
-  const [data, setData] = useState([]);
+  const [currUser, setCurrUser] = useState();
+
+  useEffect(() => {
+    console.log("context", currUser);
+  }, [currUser]);
 
   return (
     <DataContext.Provider
       value={{
-        setData,
-        data,
+        setCurrUser,
+        currUser,
       }}
     >
       {children}
